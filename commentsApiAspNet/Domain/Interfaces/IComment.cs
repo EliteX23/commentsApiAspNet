@@ -7,6 +7,7 @@ using System.Web;
 
 namespace commentsApiAspNet.Domain.Interfaces
 {
+    //Интерфейс сервиса комментариев
     public interface IComment
     {
         Task<IEnumerable<Comment>> GetList();
