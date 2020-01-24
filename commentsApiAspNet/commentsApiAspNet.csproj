@@ -140,17 +140,22 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\Ninject.Web.Common.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Domain\Core\Comment.cs" />
+    <Compile Include="Domain\Core\Token.cs" />
     <Compile Include="Domain\Interfaces\IComment.cs" />
     <Compile Include="Domain\Interfaces\ICommentRepository.cs" />
+    <Compile Include="Domain\Interfaces\IToken.cs" />
+    <Compile Include="Domain\Interfaces\ITokenRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\Repositories\CommentRepository.cs" />
+    <Compile Include="Infrastructure\Repositories\SecurityRepository.cs" />
     <Compile Include="Infrastructure\Services\CommentService.cs" />
+    <Compile Include="Infrastructure\Services\SecurityService.cs" />
+    <Compile Include="Middlewares\TokenMiddleware.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\NinjectDependencyResolver.cs" />
     <Compile Include="Utils\NinjectDependencyScope.cs" />

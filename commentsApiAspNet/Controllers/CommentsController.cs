@@ -12,11 +12,12 @@ using System.Web.Http.OData.Query;
 using System.Web.Http.OData.Routing;
 using commentsApiAspNet.Domain;
 using commentsApiAspNet.Domain.Interfaces;
+using commentsApiAspNet.Middlewares;
 using Microsoft.Data.OData;
 
 namespace commentsApiAspNet.Controllers
 {
-  
+   
     public class CommentsController : ODataController
     {
         public CommentsController(IComment commentService)

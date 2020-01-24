@@ -15,12 +15,13 @@ namespace commentsApiAspNet
     {
         protected void Application_Start()
         {
-            GlobalConfiguration.Configure(WebApiConfig.Register);
-             NinjectModule registrations = new NinjectRegistrations();
+                        NinjectModule registrations = new NinjectRegistrations();
             var kernel = new StandardKernel(registrations);
             var ninjectResolver = new NinjectDependencyResolver(kernel);
 
             GlobalConfiguration.Configuration.DependencyResolver = ninjectResolver;
+         
+            GlobalConfiguration.Configure(WebApiConfig.Register);
         }
     }
 }
