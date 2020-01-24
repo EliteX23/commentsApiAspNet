@@ -1,4 +1,5 @@
-﻿using commentsApiAspNet.Domain.Core;
+﻿
+using commentsApiAspNet.Domain;
 using commentsApiAspNet.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -15,9 +16,9 @@ namespace commentsApiAspNet.Infrastructure.Services
 
         public CommentService(ICommentRepository commentRepo)
         {
-            if (_commentRepo == null) { 
+          // if (_commentRepo == null) { 
             _commentRepo = commentRepo;
-            }
+         //   }
         }
         public async Task Delete(string id)
         {

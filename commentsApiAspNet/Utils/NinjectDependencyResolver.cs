@@ -1,9 +1,5 @@
 ﻿using Ninject;
-using Ninject.Web.WebApi;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+
 using System.Web.Http.Dependencies;
 
 namespace commentsApiAspNet.Utils
@@ -20,7 +16,7 @@ namespace commentsApiAspNet.Utils
 
         public IDependencyScope BeginScope()
         {
-            return new NinjectDependencyScope(this.kernel.BeginBlock());
+            return new NinjectDependencyScope(kernel.BeginBlock());
         }
     }
 }

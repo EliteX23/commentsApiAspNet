@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace commentsApiAspNet.Domain.Core
+namespace commentsApiAspNet.Domain
 {
     public class Comment
     {

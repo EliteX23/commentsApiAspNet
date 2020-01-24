@@ -1,4 +1,5 @@
-﻿using commentsApiAspNet.Domain.Core;
+﻿
+using commentsApiAspNet.Domain;
 using commentsApiAspNet.Domain.Interfaces;
 using MongoDB.Driver;
 using System;
@@ -14,10 +15,10 @@ namespace commentsApiAspNet.Infrastructure.Repositories
         private IMongoCollection<Comment> _collection;
         public CommentRepository(IMongoDatabase database)
         {
-            if (_collection == null)
-            {           
+            //if (_collection == null)
+            //{           
             _collection = database.GetCollection<Comment>("Comments");
-            }
+          //  }
         }
         public async Task Create(Comment item)
         {
