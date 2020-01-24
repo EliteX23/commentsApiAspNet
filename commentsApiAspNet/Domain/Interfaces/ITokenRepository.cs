@@ -10,6 +10,7 @@ namespace commentsApiAspNet.Domain.Interfaces
 {
     public interface ITokenRepository
     {
+        Task<IEnumerable<Token>> GetList();
         Task<Token> Get(string id);
         //метод предназначен исключительно для заполнения БД.
         Task Save(Token item);

@@ -1,4 +1,5 @@
-﻿using commentsApiAspNet.Domain.Core;
+﻿using commentsApiAspNet.Domain;
+using commentsApiAspNet.Domain.Core;
 using commentsApiAspNet.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,11 @@ namespace commentsApiAspNet.Infrastructure.Services
         public async Task<Token> GetApiKey(string id)
         {
             return await _apiKeyRepo.Get(id);
+        }
+
+        public Task<IEnumerable<Comment>> GetList()
+        {
+            return await _commentRepo.GetCommentList();
         }
 
         public async Task<bool> IsValid(string apikey, string method)

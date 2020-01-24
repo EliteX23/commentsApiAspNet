@@ -10,6 +10,7 @@ namespace commentsApiAspNet.Domain.Interfaces
     //Интерфейс сервиса авторизации
     public interface IToken
     {
+        Task<IEnumerable<Token>> GetList();
         Task<bool> IsValid(string apikey, string method);
 
         //Методы только для теста

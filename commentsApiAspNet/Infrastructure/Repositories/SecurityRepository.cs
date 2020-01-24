@@ -12,7 +12,8 @@ namespace commentsApiAspNet.Infrastructure.Repositories
     public class SecurityRepository : ITokenRepository
     {
         private IMongoCollection<Token> _collection;
-     
+
+      
         public SecurityRepository(IMongoDatabase database)
         {                  
             _collection = database.GetCollection<Token>("Api");          
@@ -22,7 +23,10 @@ namespace commentsApiAspNet.Infrastructure.Repositories
         {
             return await _collection.DeleteOneAsync(apiKey => apiKey.Key == id);
         }
-
+        public async Task<IEnumerable<Token>> GetList()
+        {
+            return await _collection.FindAsync(book => true).Result.ToListAsync();
+        }
         public async Task<Token> Get(string id)
         {
             return await _collection.FindAsync(apiKey => apiKey.Key == id).Result.FirstOrDefaultAsync();
