@@ -27,9 +27,9 @@ namespace commentsApiAspNet.Infrastructure.Services
             return await _apiKeyRepo.Get(id);
         }
 
-        public Task<IEnumerable<Comment>> GetList()
+        public async Task<IEnumerable<Token>> GetList()
         {
-            return await _commentRepo.GetCommentList();
+            return await _apiKeyRepo.GetList();
         }
 
         public async Task<bool> IsValid(string apikey, string method)

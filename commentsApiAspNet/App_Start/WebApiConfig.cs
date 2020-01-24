@@ -16,7 +16,7 @@ namespace commentsApiAspNet
     {
         public static void Register(HttpConfiguration config)
         {
-            // Конфигурация и службы веб-API
+            // Конфигурация и службы веб-APIК
 
             // Маршруты веб-API
             config.MapHttpAttributeRoutes();
@@ -26,11 +26,10 @@ namespace commentsApiAspNet
             builder.EntitySet<Token>("Tokens");
             var session = (IToken)config.DependencyResolver.GetService(typeof(IToken));           
             var middleware = new TokenMiddleware(session);        
-            config.MessageHandlers.Add(middleware);
-           
-          
-            config.Routes.MapODataServiceRoute("odata", "odata", builder.GetEdmModel());
-           
+            config.MessageHandlers.Add(middleware);   
+
+            config.Routes.MapODataServiceRoute("odata", "odata", builder.GetEdmModel());          
+     
             //config.Routes.MapHttpRoute(
             //    name: "DefaultApi",
             //    routeTemplate: "api/{controller}/{id}",
