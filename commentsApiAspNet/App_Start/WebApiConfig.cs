@@ -28,13 +28,13 @@ namespace commentsApiAspNet
             var middleware = new TokenMiddleware(session);        
             config.MessageHandlers.Add(middleware);   
 
-            config.Routes.MapODataServiceRoute("odata", "odata", builder.GetEdmModel());          
+            config.Routes.MapODataServiceRoute("odata", "odata", builder.GetEdmModel());            
      
-            //config.Routes.MapHttpRoute(
-            //    name: "DefaultApi",
-            //    routeTemplate: "api/{controller}/{id}",
-            //    defaults: new { id = RouteParameter.Optional }
-            //);
+            config.Routes.MapHttpRoute(
+               name: "DefaultApi",
+                routeTemplate: "api/{controller}/{id}",
+               defaults: new { id = RouteParameter.Optional }
+            );
         }
       
     }

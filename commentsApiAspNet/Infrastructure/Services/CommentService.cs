@@ -6,6 +6,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
+using System.Web.Http;
+using System.Web.Http.OData;
+using System.Web.Mvc;
 
 namespace commentsApiAspNet.Infrastructure.Services
 {
@@ -25,11 +28,13 @@ namespace commentsApiAspNet.Infrastructure.Services
             await _commentRepo.Delete(id);
         }
 
+
         public async Task<Comment> GetComment(string id)
         {
             return await _commentRepo.GetComment(id);
         }
 
+ 
         public async Task<IEnumerable<Comment>> GetList()
         {
             return await _commentRepo.GetCommentList();
@@ -44,5 +49,7 @@ namespace commentsApiAspNet.Infrastructure.Services
         {
             await _commentRepo.Update(id, comment);
         }
+
+      
     }
 }

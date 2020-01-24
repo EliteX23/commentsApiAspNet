@@ -29,7 +29,7 @@ namespace commentsApiAspNet.Utils
             Bind<ITokenRepository>().To<SecurityRepository>();
             
             Bind<IToken>().To<SecurityService>();
-           // Bind<AuthorizeMiddleware>().();
+            Bind<ICSVService>().To<CSVService>();
             
            //Bind<IFilter>().To<TokenMiddlewareFilter>();
             Bind<ICommentRepository>().To<CommentRepository>();

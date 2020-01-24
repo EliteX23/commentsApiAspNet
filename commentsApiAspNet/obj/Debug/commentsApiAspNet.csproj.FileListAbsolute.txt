@@ -137,3 +137,15 @@ C:\Users\Владимир\source\repos\commentsApiAspNet\commentsApiAspNet\bin\r
 C:\Users\Владимир\source\repos\commentsApiAspNet\commentsApiAspNet\obj\Debug\commentsApiAspNet.csproj.CopyComplete
 C:\Users\Владимир\source\repos\commentsApiAspNet\commentsApiAspNet\obj\Debug\commentsApiAspNet.dll
 C:\Users\Владимир\source\repos\commentsApiAspNet\commentsApiAspNet\obj\Debug\commentsApiAspNet.pdb
+C:\Users\Владимир\source\repos\commentsApiAspNet\commentsApiAspNet\bin\Microsoft.AspNet.OData.dll
+C:\Users\Владимир\source\repos\commentsApiAspNet\commentsApiAspNet\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Владимир\source\repos\commentsApiAspNet\commentsApiAspNet\bin\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Владимир\source\repos\commentsApiAspNet\commentsApiAspNet\bin\Microsoft.OData.Core.dll
+C:\Users\Владимир\source\repos\commentsApiAspNet\commentsApiAspNet\bin\Microsoft.OData.Edm.dll
+C:\Users\Владимир\source\repos\commentsApiAspNet\commentsApiAspNet\bin\Microsoft.Spatial.dll
+C:\Users\Владимир\source\repos\commentsApiAspNet\commentsApiAspNet\bin\Microsoft.AspNet.OData.xml
+C:\Users\Владимир\source\repos\commentsApiAspNet\commentsApiAspNet\bin\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\Владимир\source\repos\commentsApiAspNet\commentsApiAspNet\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Владимир\source\repos\commentsApiAspNet\commentsApiAspNet\bin\Microsoft.OData.Core.xml
+C:\Users\Владимир\source\repos\commentsApiAspNet\commentsApiAspNet\bin\Microsoft.OData.Edm.xml
+C:\Users\Владимир\source\repos\commentsApiAspNet\commentsApiAspNet\bin\Microsoft.Spatial.xml

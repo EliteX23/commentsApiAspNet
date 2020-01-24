@@ -13,6 +13,7 @@ using System.Web.Http.OData.Routing;
 using commentsApiAspNet.Domain;
 using commentsApiAspNet.Domain.Interfaces;
 using commentsApiAspNet.Middlewares;
+using Microsoft.AspNet.OData.Routing;
 using Microsoft.Data.OData;
 
 namespace commentsApiAspNet.Controllers
@@ -20,13 +21,14 @@ namespace commentsApiAspNet.Controllers
    
     public class CommentsController : ODataController
     {
+        private readonly IComment _commentService;
         public CommentsController(IComment commentService)
         {
             _commentService = commentService;
 
         }
         private static ODataValidationSettings _validationSettings = new ODataValidationSettings();
-        private readonly IComment _commentService;
+       
         // GET: odata/Comments
         [EnableQuery]
         public async Task<IHttpActionResult> GetComments(ODataQueryOptions<Comment> queryOptions)
@@ -114,5 +116,7 @@ namespace commentsApiAspNet.Controllers
             return StatusCode(HttpStatusCode.NoContent);
 
         }
+
+       
     }
 }
