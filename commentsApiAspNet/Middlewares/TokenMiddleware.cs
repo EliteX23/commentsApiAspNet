@@ -27,14 +27,14 @@ namespace commentsApiAspNet.Middlewares
         {
             if (request.RequestUri.AbsolutePath.Contains("Comments"))
             {
-                var token = request.Headers.Authorization.ToString();
+                var token = request.Headers.Authorization;
                 var methodType = request.Method.Method;
-                if (token.Length == 0)
+                if (token ==null || token.ToString().Length == 0)
                 {
                     return await Task.FromResult<HttpResponseMessage>(
                           request.CreateResponse(HttpStatusCode.Unauthorized));
                 }
-                var isTokenValid = await _securityService.IsValid(token, methodType);
+                var isTokenValid = await _securityService.IsValid(token.ToString(), methodType);
                 if (!isTokenValid)
                 {
                     return await Task.FromResult<HttpResponseMessage>(
